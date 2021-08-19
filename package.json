@@ -1,0 +1,21 @@
+{
+  "name": "expressend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/surfwave/expressend.git",
+  "author": "surfwave <surfwave@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
