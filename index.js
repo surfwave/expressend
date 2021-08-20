@@ -28,7 +28,7 @@ morgan.token("body", (req) => {
 app.use(express.static("build"));
 app.use(express.json());
 app.use(
-  morgan(`:method :url :status :res[content-length] - :response-time ms :body`)
+  morgan(":method :url :status :res[content-length] - :response-time ms :body")
 );
 
 app.get("/info", (req, res) => {
@@ -71,7 +71,7 @@ app.get("/api/persons/:id", (req, res, next) => {
 
 app.delete("/api/persons/:id", (req, res, next) => {
   Person.findByIdAndRemove(req.params.id)
-    .then((result) => {
+    .then(() => {
       res.status(204).end();
     })
     .catch((err) => next(err));

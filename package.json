@@ -12,7 +12,8 @@
     "build:ui": "rm -rf build && cd ../fullstackopen/part2/phonebook/ && yarn build && cp -r build ../../../expressend",
     "deploy": "git push heroku main",
     "deploy:full": "yarn build:ui && git add . && git commit -m 'uibuild' && git push && yarn deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -24,6 +25,7 @@
     "static": "^2.0.0"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
     "nodemon": "^2.0.12"
   }
 }
